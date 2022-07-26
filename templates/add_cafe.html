@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>FREELANC'R OASIS</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="static/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+            <!-- Logo -->
+            <a href="{{ url_for('home') }}" class="logo">
+                <span class="symbol"><img src="static/images/logo.svg" alt=""/></span><span class="title">FREELANC'R OASIS</span>
+            </a>
+
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Cafe List</a></li>
+            <li><a href="{{ url_for('add_cafe') }}">Add Cafe</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>Add New Cafe:</h1>
+
+            <!-- Form -->
+            <section>
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="row gtr-uniform">
+                        <div class="col-6 col-12-xsmall">
+                            {{ form.cafe.label }}
+                            {{ form.cafe }}
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            {{ form.address.label }}
+                            {{ form.address }}
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            {{ form.open.label }}
+                            {{ form.open }}
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            {{ form.close.label }}
+                            {{ form.close }}
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            {{ form.coffee.label }}
+                            {{ form.coffee }}
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            {{ form.wifi.label }}
+                            {{ form.wifi }}
+                        </div>
+                        <div class="col 6 col-12-xsmall">
+                            {{ form.hidden_tag() }}
+                            {{ form.photo.label }}
+                            {{ form.photo }}
+                            {{ form.submit }}
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <h2>Follow</h2>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/HatesFuture" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://github.com/dangalansky" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="mailto:dangalansky@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </section>
+            <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/browser.min.js"></script>
+<script src="static/js/breakpoints.min.js"></script>
+<script src="static/js/util.js"></script>
+<script src="static/js/main.js"></script>
+
+</body>
+</html>
