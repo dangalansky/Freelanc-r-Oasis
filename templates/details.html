@@ -1,0 +1,20 @@
+{% include "header.html" %}
+<!-- Main -->
+<div id="main">
+    {% for row in cafes: %}
+    {% if cafe == row[0] :%}
+    <span class="image main"><img src='static/images/{{ row[0] }}.png' alt=""/></span>
+    <div id="description">
+        <h1>{{ row[0] }}</h1>
+
+        <h3>{{ row[1] }}</h3>
+        <h6>Hours:{{ row[4] }}-{{ row[5] }}</h6>
+        <h6>Coffee Rating:{{ row[6] }}</h6>
+        <h6>WIFI:{{ row[7] }}</h6>
+    </div>
+
+
+    {% endif %}
+    {% endfor %}
+</div>
+{% include "footer.html" %}
