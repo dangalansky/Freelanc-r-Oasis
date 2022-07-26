@@ -53,5 +53,15 @@ def add_cafe():
             return "Unsupported File Type"
     return render_template("add_cafe.html", form=form)
 
+@app.route('/<cafe>')
+def details(cafe):
+    cafe = cafe.strip()
+    with open('data.csv', newline='') as file:
+        data = csv.reader(file, delimiter=',')
+        list = []
+        for row in data:
+            list.append(row)
+    return render_template("details.html", cafe=cafe, cafes=list)
+
 if __name__ == '__main__':
     app.run(port=5001, debug=True)
