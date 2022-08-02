@@ -1,9 +1,9 @@
 import os
 import csv
 import random
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template
 from flask_wtf import FlaskForm
-from wtforms import SubmitField, StringField, URLField, SelectField
+from wtforms import SubmitField, StringField, SelectField
 from flask_wtf.file import FileField
 from wtforms.validators import DataRequired
 
@@ -23,7 +23,7 @@ class AddCafeForm(FlaskForm):
     close = StringField("Closing Time (i.e. 5PM)", validators=[DataRequired()])
     coffee = SelectField("Rate Coffee", choices=['☕', '☕☕', '☕☕☕', '☕☕☕☕', '☕☕☕☕☕'])
     wifi = SelectField("WIFI?", choices=['YUP', 'NOPE'])
-    photo = FileField("Upload Photo (must be .png!)", validators=[DataRequired()])
+    photo = FileField("Upload Photo (must be .png//best if cropped as square [1:1])", validators=[DataRequired()])
     submit = SubmitField("Submit")
 
 @app.route('/')
