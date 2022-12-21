@@ -1,5 +1,5 @@
 # Freelancer's Oasis
-A website dedicated to listing Denver-based coffee shops and their WIFI availability. Infinitely customizable to any city, the script uses Flask and WTForms to write data to a .csv file that is referenced when rendering the home page and then formats that data to the prescibed template. 
+A customizable website currently set to listing Denver-based coffee shops and their WIFI availability. Infinitely adaptable to any city, this Python script uses Flask and WTForms to write data to a .csv file that is referenced when rendering the home page and then formats that data to the prescibed template. 
 
 Templates pulled from HTML5UP.net
 
